@@ -1,32 +1,37 @@
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function scrollToSection(sectionId: string) {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+export function formatDate(date: string) {
+  let currentDate = new Date().getTime();
+  if (!date.includes("T")) {
+    date = `${date}T00:00:00`;
   }
-}
+  let targetDate = new Date(date).getTime();
+  let timeDifference = Math.abs(currentDate - targetDate);
+  let daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-export function formatDate(date: string | Date) {
-  return new Date(date).toLocaleDateString('vi-VN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+  let fullDate = new Date(date).toLocaleString("en-us", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
   });
-}
 
-export function calculateYearsOfExperience(startDate: string): number {
-  const start = new Date(startDate);
-  const now = new Date();
-  const diffTime = Math.abs(now.getTime() - start.getTime());
-  const diffYears = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 365));
-  return diffYears;
+  if (daysAgo < 1) {
+    return "Today";
+  } else if (daysAgo < 7) {
+    return `${fullDate} (${daysAgo}d ago)`;
+  } else if (daysAgo < 30) {
+    const weeksAgo = Math.floor(daysAgo / 7);
+    return `${fullDate} (${weeksAgo}w ago)`;
+  } else if (daysAgo < 365) {
+    const monthsAgo = Math.floor(daysAgo / 30);
+    return `${fullDate} (${monthsAgo}mo ago)`;
+  } else {
+    const yearsAgo = Math.floor(daysAgo / 365);
+    return `${fullDate} (${yearsAgo}y ago)`;
+  }
 }

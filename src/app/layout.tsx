@@ -1,52 +1,52 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter as FontSans } from "next/font/google";
 
-import './globals.css';
+import type { Metadata } from "next";
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { TooltipProvider } from "@/components/ui/Tooltip";
+import { DATA } from "@/data/resume";
+import { cn } from "@/lib/utils";
+import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
-  title: 'Lưu Khoa Học - Full-Stack Developer & Software Engineer',
-  description:
-    'Passionate full-stack developer specializing in React, Next.js, and modern web technologies. Building user-centric applications with clean, efficient code.',
-  keywords: [
-    'Lưu Khoa Học',
-    'Full-Stack Developer',
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Web Developer',
-    'Software Engineer',
-  ],
-  authors: [{ name: 'Lưu Khoa Học' }],
-  creator: 'Lưu Khoa Học',
-  openGraph: {
-    title: 'Lưu Khoa Học - Full-Stack Developer',
-    description:
-      'Passionate full-stack developer specializing in modern web technologies',
-    url: 'https://luukhoahoc.me',
-    siteName: 'Lưu Khoa Học Portfolio',
-    locale: 'en_US',
-    type: 'website',
+  metadataBase: new URL(DATA.url),
+  title: {
+    default: DATA.name,
+    template: `%s | ${DATA.name}`,
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Lưu Khoa Học - Full-Stack Developer',
-    description:
-      'Passionate full-stack developer specializing in modern web technologies',
-    creator: '@luukhoahoc',
+  description: DATA.description,
+  openGraph: {
+    title: `${DATA.name}`,
+    description: DATA.description,
+    url: DATA.url,
+    siteName: `${DATA.name}`,
+    locale: "en_US",
+    type: "website",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: `${DATA.name}`,
+    card: "summary_large_image",
+  },
+  verification: {
+    google: "",
+    yandex: "",
   },
 };
 
@@ -56,11 +56,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white`}
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
+          fontSans.variable
+        )}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <TooltipProvider delayDuration={0}>
+            {children}
+            <Navbar />
+          </TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
