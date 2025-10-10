@@ -30,9 +30,16 @@ const BlurFade = ({
   blur = "6px",
 }: BlurFadeProps) => {
   const ref = useRef(null);
+
+  // Parse margin value safely
+  const parseMargin = (margin: string) => {
+    const numericValue = parseFloat(margin.replace(/[^-0-9.]/g, ""));
+    return isNaN(numericValue) ? -50 : numericValue;
+  };
+
   const inViewResult = useInView(ref, {
     once: true,
-    margin: `${Number(inViewMargin)}px`,
+    margin: `${parseMargin(inViewMargin)}px`,
   });
   const isInView = !inView || inViewResult;
   const defaultVariants: Variants = {
