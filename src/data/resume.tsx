@@ -76,7 +76,7 @@ export const DATA = {
     {
       company: "GreenSoftware Asia",
       href: "https://greensoftware.asia",
-      badges: ["Frontend", "E-commerce", "Fintech"],
+      // badges: ["Frontend", "E-commerce", "Fintech"],
       location: "Ho Chi Minh City, Viet Nam",
       title: "Front-end Developer",
       logoUrl: "/greensoftware-asia.svg",
