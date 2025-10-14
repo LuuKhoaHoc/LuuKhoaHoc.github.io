@@ -1,7 +1,5 @@
 # LuuKhoaHoc | Front-end Developer Portfolio
 
-> Portfolio cá nhân được xây dựng bằng Next.js, giới thiệu kinh nghiệm chuyên môn trong việc phát triển ứng dụng Front-end, đặc biệt là kinh nghiệm trước đây với công nghệ **Blockchain**.
-
 ## 🚀 Công Nghệ Sử Dụng (Tech Stack)
 
 Dự án này được xây dựng dựa trên các công nghệ cốt lõi sau:
@@ -42,5 +40,5 @@ Bạn có thể tìm thấy tôi tại:
 
 - **Tên:** Luu Khoa Hoc
 - **LinkedIn:** [luukhoahoc/](https://www.linkedin.com/in/luukhoahoc/)
-- **Email:** [Địa chỉ Email của bạn]
+- **Email:** [luukhoahoc.work@gmail.com](mailto:luukhoahoc.work@gmail.com)
 - **GitHub:** [LuuKhoaHoc](https://github.com/LuuKhoaHoc)
