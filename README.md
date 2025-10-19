@@ -1,30 +1,28 @@
 # LuuKhoaHoc | Front-end Developer Portfolio
 
-> Portfolio cá nhân được xây dựng bằng Next.js, giới thiệu kinh nghiệm chuyên môn trong việc phát triển ứng dụng Front-end, đặc biệt là kinh nghiệm trước đây với công nghệ **Blockchain**.
+## 🚀 Tech Stack
 
-## 🚀 Công Nghệ Sử Dụng (Tech Stack)
-
-Dự án này được xây dựng dựa trên các công nghệ cốt lõi sau:
+This project is built using the following core technologies:
 
 - **Framework:** React.js / Next.js
-- **Ngôn ngữ:** TypeScript
+- **Language:** TypeScript
 - **Styling:** Tailwind CSS
-- **Môi trường:** Node.js
+- **Environment:** Node.js
 
-## ✨ Các Tính Năng Nổi Bật
+## ✨ Key Features
 
-- **Thiết kế:** Minimalist, hiện đại và Responsive.
-- **Hiệu suất:** Tối ưu hóa SEO và tốc độ tải trang (Next.js features).
-- **Dự án:** Tổng hợp các dự án tiêu biểu (có đính kèm link demo/source code).
-- **Kinh nghiệm:** Trình bày rõ ràng kinh nghiệm làm việc với Blockchain.
+- **Design:** Minimalist, modern, and Responsive layout.
+- **Performance:** Optimized for SEO and page load speed (leveraging Next.js features).
+- **Projects:** Collection of featured projects (with demo and source code links).
+- **Experience:** Clear presentation of prior experience working with Blockchain technology.
 
-## 🛠️ Hướng Dẫn Cài Đặt (Local Setup)
+## 🛠️ Local Setup Guide
 
-Để chạy dự án này trên máy tính cục bộ của bạn:
+To run this project on your local machine:
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/LuuKhoaHoc/luukhoahoc.github.io.git
+git clone [https://github.com/LuuKhoaHoc/luukhoahoc.github.io.git](https://github.com/LuuKhoaHoc/luukhoahoc.github.io.git)
 cd luukhoahoc.github.io
 
 # 2. Install dependencies
@@ -33,14 +31,17 @@ npm install
 # 3. Run development server
 npm run dev
 
-# Mở trình duyệt tại http://localhost:3000 để xem kết quả.
+# Open your browser at http://localhost:3000 to view the result.
+````
+
+## 📧 Contact
+
+You can find me via:
+
+  - **Name:** Luu Khoa Hoc
+  - **LinkedIn:** [luukhoahoc/](https://www.linkedin.com/in/luukhoahoc/)
+  - **Email:** [luukhoahoc.work@gmail.com](mailto:luukhoahoc.work@gmail.com)
+  - **GitHub:** [LuuKhoaHoc](https://github.com/LuuKhoaHoc)
+
+
 ```
-
-## 📧 Liên Hệ
-
-Bạn có thể tìm thấy tôi tại:
-
-- **Tên:** Luu Khoa Hoc
-- **LinkedIn:** [luukhoahoc/](https://www.linkedin.com/in/luukhoahoc/)
-- **Email:** [Địa chỉ Email của bạn]
-- **GitHub:** [LuuKhoaHoc](https://github.com/LuuKhoaHoc)
