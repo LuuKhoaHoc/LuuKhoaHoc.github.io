@@ -42,6 +42,3 @@ You can find me via:
   - **LinkedIn:** [luukhoahoc/](https://www.linkedin.com/in/luukhoahoc/)
   - **Email:** [luukhoahoc.work@gmail.com](mailto:luukhoahoc.work@gmail.com)
   - **GitHub:** [LuuKhoaHoc](https://github.com/LuuKhoaHoc)
-
-
-```
